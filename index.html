@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Játszótér</title>
+	<meta name="copyright" content="http://diversyos.com">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<section id="hover-allat">
+		<div class="content" onclick="location.href='hover_allat.html'">
+			<div class="txt">
+				<h1>Egyszerű hover effekt vagy nem</h1>
+				<p>Pár nagyon egyszerű hover effekt, amihez SVG vonalakat is animáltam.</p>
+			</div>
+			<div class="arrow">
+				<span class="top"></span>
+				<span class="bottom"></span>
+			</div>
+		</div>
+	</section>
+
+	<section id="tilt-effect" 
+	data-0="top:90%;"
+	data-500="top:90%;"
+	data-1500="top:0%">
+		<div class="content" onclick="location.href='menu.html'">
+			<div 
+			data-500="margin-top:0%;"
+			data-1500="margin-top:20%;"
+			class="txt">
+				<h1 
+				>Tilt effekt</h1>
+				<p>Egy nagyon egyszerűen használható tilt effekt, aminek a scriptjét a <a href="http://tympanus.net/Development/ImageTiltEffect/" class="link">Codrops </a> csapata írta meg.</p>
+			</div>
+			<div class="arrow"
+			data-0="opacity:0;"
+			data-200=opacity:1;>
+				<span class="top"></span>
+				<span class="bottom"></span>
+			</div>
+		</div>
+	</section>
+
+	<section id="button-effect"
+	data-500="top:100%;"
+	data-1500="top:90%;"
+	data-2000="top:90%"
+	data-3000="top:0">
+		<div class="content" onclick="location.href='button.html'">
+			<div 
+			data-2000="margin-top:0%;"
+			data-3000="margin-top:20%;"
+			class="txt">
+				<h1 
+				>Button effekt</h1>
+				<p>Pár nagyon egyszerű, szép, könnyen elkészíthető button és menü pontok.</p>
+			</div>
+			<div class="arrow"
+			data-1100="opacity: 0;"
+			data-1400="opacity: 1"
+			>
+				<span class="top"></span>
+				<span class="bottom"></span>
+			</div>
+		</div>
+	</section>
+
+<script src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+    var s = skrollr.init();
+    </script>
+
+</body>
+</html>

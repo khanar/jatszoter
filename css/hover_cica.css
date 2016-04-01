@@ -1,0 +1,391 @@
+body {
+  background-color: #282827;
+  padding-bottom: 100px;
+}
+.container {
+  width: 100%;
+  height: 360px;
+}
+.effect {
+  position: relative;
+  width: 480px;
+  height: 360px;
+  margin: 10px auto
+}
+.inside-nav {
+  position: fixed;
+}
+.prev-page {
+  position: absolute;
+  font-size: 30px;
+  color: whitesmoke;
+  margin-left: 20px;
+}
+.prev-page > a {
+  vertical-align: middle;
+  font-size: 20px;
+  margin-left: 10px;
+}
+/***********************
+Cica
+***********************/
+#cica .fa-plus {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 4em;
+  opacity: 0;
+  transition: all .5s;
+}
+#cica img {
+  transition: all .5s ;
+}
+#cica h2{
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transition: all .2s cubic-bezier(.01, .23, .06, 1);
+  opacity: 0;
+  border: none;
+  width: 30%;
+  text-align: center;
+  font-size: 23px;
+}
+#cica p {
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+  opacity: 0;
+  width: 30%;
+  font-weight: bold;
+  text-align: center;
+  transition: all .2s cubic-bezier(.01, .23, .06, 1);
+}
+#cica:hover img{
+  -webkit-filter: blur(2px);
+}
+#cica:hover h2 {
+  top: 40%;
+  opacity: 0.7;
+  border-bottom: solid 2px #EB8B00;
+  -webkit-filter: blur(0px);
+}
+#cica:hover p {
+  bottom: 45%;
+  opacity: 0.7;
+  -webkit-filter: blur(0px);
+}
+#cica:hover .fa {
+  opacity: .4;
+  -webkit-filter: blur(0px);
+}
+
+/***********************
+Kutya
+***********************/
+.kutyaimg {
+  height: 350px;
+  width: 470px;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  z-index: -1;
+  transition: all linear .2s;
+}
+.kutyah2 {
+  position: relative;
+  text-align: center;
+  top: 30%;
+  color: #e25d33;
+  right: 8%;
+}
+.kutyah2 span {
+  -webkit-transition: all .5s;
+  position: absolute;
+  display: inline;
+  font-family: 'Montserrat'
+}
+.kutyah2 .kutya2 {
+  opacity: 0;
+  transform: rotateY(90deg);
+  color: black; 
+}
+.kutyap {
+  position: relative;
+  text-align: center;
+  top: 38%;
+  font-weight: bold;
+  opacity: 0;
+  transition: all linear .2s;
+}
+.kutya a {
+  color: #e25d33;
+}
+
+.kutya:hover .kutya1 {
+  transform: rotateY(90deg);
+  opacity:0;
+}
+
+.kutya:hover .kutya2 {
+  transform: rotateY(0deg);
+  opacity: 1;
+  color: black
+}
+.kutya:hover .kutyaimg {
+  -webkit-filter: blur(3px);
+}
+.kutya:hover .kutyap {
+  opacity: 1;
+}
+
+div.kutya svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#borderlinetop, #borderlinebottom {
+  stroke-width: 3;
+  stroke: black;
+  fill: none;
+  stroke-dasharray: 480;
+  opacity: 0;
+  transition: all .4s;
+}
+.kutya:hover #borderlinetop {
+  transform: translateX(455px);
+  opacity: .7;
+}
+.kutya:hover #borderlinebottom {
+  transform: translateX(-455px);
+  opacity: .7;
+}
+div.kutya svg line {
+  stroke-width: 3;
+  stroke: #e25d33;
+  fill: none;
+  stroke-dasharray: 480;
+  transition: transform .4s;
+}
+.kutya:hover .line #line1 {
+  transform: translateX(-430px);
+}
+.kutya:hover .line #line2 {
+  transform: translateY(-310px);
+}
+.kutya:hover .line #line3 {
+  transform: translateY(310px);
+}
+.kutya:hover .line #line4 {
+  transform: translateX(-430px);
+}
+.kutya:hover .line #line5 {
+  transform: translateX(430px);
+}
+.kutya:hover .line #line6 {
+  transform: translateY(310px);
+}
+.kutya:hover .line #line7 {
+  transform: translateY(-310px);
+}
+.kutya:hover .line #line8 {
+  transform: translateX(430px);
+}
+.kutyap a {
+  text-decoration: none;
+}
+
+
+/***********************
+Madár
+***********************/
+.madar {
+  color: #282827;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 0;  
+  z-index: -1;
+  border-top: 100px solid rgba(226, 93, 51, .8);
+  border-right: 100px solid transparent;
+  transition: border .5s;
+}
+.info:hover .overlay {
+  border-top: 840px solid rgba(226, 93, 51, .7);
+  border-right: 840px solid transparent;
+}
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: 1;
+}
+.info p {
+  height: 0;
+  margin-top: 20px;
+  margin-left: 10px;
+  opacity: 1;
+  text-transform: uppercase;
+  transition: opacity .5s
+}
+.info:hover p {
+  opacity: 0;
+  transition: opacity .5s
+}
+.overlay-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.info:hover .overlay-content {
+  opacity: 1;
+  transition: opacity .5s;
+  transition-delay: .2s;
+}
+.overlay-content h2 {
+  text-align: center;
+
+}
+.overlay-content ul {
+  margin: 0 auto;
+  width: 140px;
+  text-align: center;
+}
+.overlay-content li {
+  list-style: none;
+  padding: 10px 0;
+  color: #fafafa;
+}
+.icon {
+  display: inline-block;
+  height: 22px; 
+  width: 22px;
+  margin-right: 40px;
+}
+.aperture {
+  background: url('../img/hover_allat/icon_photo.png') 0 -101px no-repeat;
+}
+.aperture:after {
+  content: 'ƒ/5.4';
+  margin-left: 30px;
+  font-weight: bold;
+}
+.exposure {
+  background: url('../img/hover_allat/icon_photo.png') -100px -78px no-repeat;
+}
+.exposure:after {
+  content: '1/40';
+  margin-left: 30px;
+  font-weight: bold;
+}
+.focal-length {
+  background: url('../img/hover_allat/icon_photo.png') -40px -124px no-repeat;
+}
+.focal-length:after {
+  content: '37.0mm';
+  margin-left: 30px;
+  font-weight: bold;
+}
+.iso {
+  background: url('../img/hover_allat/icon_photo.png') 0px -149px no-repeat; 
+}
+.iso:after {
+  content: '100';
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+/***********************
+Madár
+***********************/
+#medve>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 470px;
+  height: 350px;
+}
+.medve-overlay {
+  position: absolute;
+  width: 480px;
+  height: 360px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #e25d33;
+  transition: all .3s;
+}
+#medve:hover .medve-overlay {
+  width: 200px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all .3s;
+}
+.medve-overlay::after {
+  content: 'Bővebben';
+  display: block;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  text-align: center;
+  padding: 11px;
+  background-color: rgba(40, 40, 39, .7);
+  color: #fafafa;
+  opacity: 0;
+  transition: opacity 0s;
+  transition-delay: 0s;
+}
+#medve:hover .medve-overlay::after {
+  opacity: 1;
+  transition: opacity .2s;
+  transition-delay: .1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
