@@ -1,1 +1,1 @@
-Pár pure html+css+js effekt ami. 
+Pár pure & simple html+css+js effekt ami. 
