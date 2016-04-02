@@ -1,0 +1,149 @@
+body
+	background-color: $black
+	padding-bottom: 100px
+.container
+	width: 100%
+	height: 360px
+.effect
+	position: relative
+	width: 480px
+	height: 360px
+	margin: 10px auto
+.inside-nav
+	position: fixed
+.prev-page
+	position: absolute
+	font-size: 30px
+	color: $white
+.prev-page>a
+	vertical-align: middle
+	font-size: 20px
+	margin-left: 10px
+
+//***********************
+//Cica
+//***********************
+#cica
+	.fa-plus
+		position: absolute
+		top: 40%
+		left: 50%
+		font-size: 4em
+		opacity: 0
+		transition: all .5s
+	img
+		transition: all .5s
+	h2, p
+		position: absolute
+		width: 30%
+		opacity: 0
+		border: none
+		text-align: center
+		transition: all .2s cubic-bezier(.01, .23, .06, 1)
+	h2
+		padding-bottom: 5px
+		font-size: 23px
+		top: 0
+		left: 10%
+	p
+		font-weight: bold
+		bottom: 0
+		left: 10%
+	&:hover img
+		-webkit-filter: blur(2px)
+	&:hover h2
+		top: 40%
+		opacity: .7
+		border-bottom: solid 2px $soft-orange
+	&:hover p
+		bottom: 45%
+		opacity: .7
+		-webkit-filter: blur(0px)
+	&:hover .fa
+		opacity: .4
+		-webkit-filter: blur(0px)
+
+//***********************
+//Kutya
+//***********************
+#kutya
+	.kutya_img
+		position: absolute
+		top: 5px
+		left: 5px
+		height: 350px
+		width: 470px
+		z-index: -1
+		transition: all linear .2s
+	.kutya_h2
+		position: relative
+		top: 30%
+		right: 8%
+		color: $dark-orange
+		text-align: center
+		span
+			position: absolute
+			display: inline
+			font-family: $josefin
+			transition: all .5s
+		.kutya2
+			opacity: 0
+			color: $black
+			transform: rotateY(90deg)
+	.kutya_p
+		position: relative
+		top: 38%
+		opacity: 0
+		text-align: center
+		font-weight: bold
+		transition: all linear .2s
+	a
+		color: $dark-orange
+		text-decoration: none
+	&:hover .kutya1
+		opacity: 0
+		transform: rotateY(90deg)
+	&:hover .kutya2
+		opacity: 1
+		color: $black
+		transform: rotateY(0deg)
+	&:hover .kutya_img
+		-webkit-filter: blur(3px)
+	&:hover .kutya_p
+		opacity: 1
+	&:hover #borderlinetop
+		transform: translateX(455px)
+		opacity: .7
+	&:hover #borderlinebottom
+		transform: translateX(-455px)
+		opacity: .7
+	&:hover #line1
+		transform: translateX(-430px)
+	&:hover #line2
+		transform: translateY(-310px)
+	&:hover #line3
+		transform: translateY(310px)
+	&:hover #line4
+		transform: translateX(-430px)
+	&:hover #line5
+		transform: translateX(430px)
+	&:hover #line6
+		transform: translateY(310px)
+	&:hover #line7
+		transform: translateY(-310px)
+	&:hover #line8
+		transform: translateX(430px)
+
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		line
+			stroke-width: 3
+			stroke: $dark-orange
+			fill: none
+			stroke-dasharray: 480
+			transition: all .4s
+#borderlinetop, #borderlinebottom
+	opacity: 0
+	stroke: $black !important
