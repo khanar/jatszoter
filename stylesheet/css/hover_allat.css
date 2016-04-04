@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto);
 .link {
   display: inline-block;
@@ -194,3 +195,133 @@ body {
 #borderlinetop, #borderlinebottom {
   opacity: 0;
   stroke: #3a3c40 !important; }
+
+#madar {
+  color: #3a3c40;
+  overflow: hidden; }
+
+.overlay, .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0; }
+
+.overlay {
+  z-index: -1;
+  border-top: 100px solid rgba(226, 93, 52, 0.8);
+  border-right: 100px solid transparent;
+  transition: border 0.5s; }
+
+.info {
+  z-index: 1;
+  width: 100%; }
+  .info p {
+    height: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: opacity 0.5s; }
+  .info:hover .overlay {
+    border-top: 840px solid rgba(226, 93, 51, 0.7);
+    border-right: 840px solid transparent; }
+  .info:hover p {
+    opacity: 0;
+    transition: opancity 0.5s; }
+  .info:hover .overlay-content {
+    opacity: 1;
+    transition: opacity 0.5s;
+    transition-delay: 0.2s; }
+
+.overlay-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .overlay-content h2 {
+    text-align: center; }
+  .overlay-content ul {
+    margin: 0 auto;
+    width: 140px;
+    text-align: center; }
+  .overlay-content li {
+    padding: 10px 0;
+    color: #fafafa; }
+
+.icon {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  margin-right: 40px; }
+
+.aperture {
+  background: url("../img/hover_allat/icon_photo.png") 0 -101px no-repeat; }
+  .aperture::after {
+    content: "ƒ/5.4";
+    margin-left: 30px;
+    font-weight: bold; }
+
+.exposure {
+  background: url("../img/hover_allat.html/icon_photo.png") -100px -78px no-repeat; }
+  .exposure::after {
+    content: "1/40";
+    margin-left: 30px;
+    font-weight: bold; }
+
+.focal-length {
+  background: url("../img/hover_allat.html/icon_photo.png") -40px -124px no-repeat; }
+  .focal-length::after {
+    content: "37.0mm";
+    margin-left: 30px;
+    font-weight: bold; }
+
+.iso {
+  background: url("../img/hover_allat/icon_photo.png") 0px -149px no-repeat; }
+  .iso::after {
+    content: "100";
+    margin-left: 30px;
+    font-weight: bold; }
+
+#medve .medve-overlay, #medve img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+#medve .medve-overlay {
+  width: 480px;
+  height: 360px;
+  border: 2px solid #e25d33;
+  transition: all 0.3s; }
+  #medve .medve-overlay::after {
+    content: "Bővebben";
+    display: block;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 13px;
+    color: #fafafa;
+    background-color: rgba(40, 40, 39, 0.7);
+    opacity: 0;
+    transition: opacity 0s;
+    transition-delay: 0s; }
+#medve img {
+  width: 470px;
+  height: 350px; }
+#medve:hover .medve-overlay {
+  width: 200px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s; }
+  #medve:hover .medve-overlay::after {
+    opacity: 1;
+    transition: opacity 0.2s;
+    transition-delay: 0.1s; }
